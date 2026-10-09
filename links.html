@@ -6,6 +6,8 @@
 <p><small>Private tool. Do not upload this file with your public site, or delete it after use.</small></p>
 <label>Your live website address</label>
 <input id="base" placeholder="https://your-site.netlify.app/">
+<label>Language of the link</label>
+<select id="lg" style="width:100%;font:inherit;padding:10px;border:1px solid #c9b79a;border-radius:8px;margin:6px 0 14px"><option value="">English (guest can switch)</option><option value="bn">বাংলা (guest can switch)</option></select>
 <label>One guest per line: Name, seats</label>
 <textarea id="names" rows="8" placeholder="Anita Roy, 2&#10;Rahul Sen, 1"></textarea>
 <button id="go">Make links</button>
@@ -17,12 +19,12 @@ document.getElementById('go').onclick=function(){
   var out=document.getElementById('out');out.textContent='';
   document.getElementById('names').value.split('\n').forEach(function(l){
     var p=l.split(','),n=(p[0]||'').trim();if(!n)return;
-    var s=Math.min(6,Math.max(1,parseInt(p[1],10)||1)),u=base+'?guest='+encodeURIComponent(n)+'&seats='+s;
+    var s=Math.min(6,Math.max(1,parseInt(p[1],10)||1)),u=base+'?guest='+encodeURIComponent(n)+'&seats='+s+(document.getElementById('lg').value?'&lang='+document.getElementById('lg').value:'');
     var r=document.createElement('div');r.className='r';
     var b=document.createElement('b');b.textContent=n;
     var c=document.createElement('code');c.textContent=u;
     var cb=document.createElement('button');cb.textContent='Copy';cb.onclick=function(){navigator.clipboard.writeText(u);cb.textContent='Copied'};
-    var w=document.createElement('a');w.href='https://wa.me/?text='+encodeURIComponent('You are warmly invited: '+u);w.target='_blank';w.rel='noopener';w.textContent='WhatsApp';
+    var w=document.createElement('a');w.href='https://wa.me/?text='+encodeURIComponent((document.getElementById('lg').value==='bn'?'আপনাকে সাদর আমন্ত্রণ: ':'You are warmly invited: ')+u);w.target='_blank';w.rel='noopener';w.textContent='WhatsApp';
     r.append(b,c,cb,w);out.appendChild(r);
   });
 };
