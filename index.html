@@ -20,16 +20,18 @@
 <div id="open">
   <svg class="threads" id="threads" aria-hidden="true"></svg>
   <div class="cardgrow" id="cardgrow"></div>
+  <div class="langsw" role="group" data-i-aria="langAria" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">English</button><button type="button" data-lang="bn" aria-pressed="false">বাংলা</button></div>
   <p class="ihint">Press and hold the seal to open</p>
   <div class="sealwrap" id="sealwrap">
     <svg class="ringp" viewBox="0 0 168 168" aria-hidden="true"><circle class="bg" cx="84" cy="84" r="72"/><circle class="fg" cx="84" cy="84" r="72"/></svg>
     <i class="glow"></i><i class="ripple"></i><i class="ripple r2"></i>
-    <button class="seal2" id="seal" aria-label="Press and hold to open the invitation"><span class="half ini">D&amp;S</span></button>
+    <button class="seal2" id="seal" aria-label="Press and hold to open the invitation" data-i-aria="sealAria"><span class="half ini">D&amp;S</span></button>
   </div>
 </div>
 
 <div id="thread" aria-hidden="true"><i class="tl"></i><i class="nd"></i><i class="kn"></i></div>
 <div id="petals" aria-hidden="true"></div>
+<button id="lang" aria-label="Language">বাং</button>
 <button id="theme" aria-label="Switch to dark mode"><svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg><svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
 <button id="music" aria-label="Play music"><b></b><b></b><b></b></button>
 
@@ -39,67 +41,69 @@
 
   <svg class="rings" viewBox="0 0 92 56" aria-hidden="true"><circle cx="34" cy="30" r="20" pathLength="1"/><circle cx="58" cy="30" r="20" pathLength="1"/><path d="M34 6l4 5-4 5-4-5z" fill="currentColor" stroke="none"/></svg>
   <p class="greet st" id="greet" hidden style="--d:.3s"></p>
-  <p class="small st" style="--d:.6s">TOGETHER WITH THEIR FAMILIES</p>
-  <h1 class="names st" style="--d:1s"><span data-k="bride">Debopama</span><i>and</i><span data-k="groom">Soumajit</span></h1>
-  <p class="small st" style="--d:1.4s">REQUEST THE PLEASURE OF YOUR COMPANY<br>AT THEIR ENGAGEMENT CEREMONY</p>
+  <p class="small st" style="--d:.6s" data-i="together">Together with their families</p>
+  <h1 class="names st" style="--d:1s"><span data-k="bride">Debopama</span><i data-i="and">and</i><span data-k="groom">Soumajit</span></h1>
+  <p class="small st pre" style="--d:1.4s" data-i="request">Request the pleasure of your company
+at their engagement ceremony</p>
   <div class="rule st" style="--d:1.7s">&#9670;</div>
-  <p class="date st" style="--d:2s" data-k="dateLong">Monday, 14 December 2026</p>
-  <p class="small st" style="--d:2.2s;margin-top:8px"><span data-k="time">6:00 in the evening</span> &middot; <span data-k="city">Kolkata</span></p>
-  <p class="more st" style="--d:2.8s">SCROLL</p>
+  <p class="date st" style="--d:2s" data-k="dateLong">Saturday, 12 December 2026</p>
+  <p class="small st" style="--d:2.2s;margin-top:8px"><span data-k="time">6:30 in the evening</span> &middot; <span data-k="city">Kolkata</span></p>
+  <p class="more st" style="--d:2.8s" data-i="scroll">Scroll</p>
 </section>
 
 <section id="story">
   <div class="stick">
-    <p class="small story-h">OUR STORY</p>
-    <p class="story-p" id="storyP" data-k="story">We met by chance. We stayed by choice. Somewhere between long conversations and quiet mornings, we found home in each other. Now we begin the next chapter, and we would love for you to be part of it.</p>
+    <p class="small story-h" data-i="ourStory">Our story</p>
+    <p class="story-p" id="storyP">We met by chance. We stayed by choice. Somewhere between long conversations and quiet mornings, we found home in each other. Now we begin the next chapter, and we would love for you to be part of it.</p>
   </div>
 </section>
 
 <section class="sheet drawn" id="details">
   <div class="frame" aria-hidden="true"></div><i class="cn tl"></i><i class="cn tr"></i><i class="cn bl"></i><i class="cn br"></i>
-  <h2 class="script st" style="font-size:clamp(44px,10vw,68px)">The celebration</h2>
+  <h2 class="script st" style="font-size:clamp(44px,10vw,68px)" data-i="celebration">The celebration</h2>
   <div class="det">
-    <div class="tcard"><div class="tin flip" style="--d:0s"><h3>DATE</h3><p><span data-k="weekday">Monday</span><em data-k="dateMed">14 December 2026</em></p></div></div>
-    <div class="tcard"><div class="tin flip" style="--d:.15s"><h3>TIME</h3><p><span data-k="timeShort">6:00 PM</span><em>Dinner to follow</em></p></div></div>
-    <div class="tcard"><div class="tin flip" style="--d:.3s"><h3>PLACE</h3><p><span data-k="city">Kolkata</span><em data-k="venue">Lakewood Estate, Community Hall</em></p></div></div>
+    <div class="tcard"><div class="tin flip" style="--d:0s"><h3 data-i="date">Date</h3><p><span data-k="weekday">Saturday</span><em data-k="dateMed">12 December 2026</em></p></div></div>
+    <div class="tcard"><div class="tin flip" style="--d:.15s"><h3 data-i="time">Time</h3><p><span data-k="timeShort">6:30 PM</span><em data-i="dinner">Dinner to follow</em></p></div></div>
+    <div class="tcard"><div class="tin flip" style="--d:.3s"><h3 data-i="place">Place</h3><p><span data-k="city">Kolkata</span><em data-k="venue">Venue to be shared</em></p></div></div>
   </div>
-  <div class="cd" id="cd" aria-label="Countdown to the celebration"><div><b>0</b><span>DAYS</span></div><div><b>0</b><span>HOURS</span></div><div><b>0</b><span>MINUTES</span></div><div><b>0</b><span>SECONDS</span></div></div>
+  <div class="cd" id="cd" aria-label="Countdown to the celebration" data-i-aria="cdAria"><div><b>0</b><span data-i="days">Days</span></div><div><b>0</b><span data-i="hours">Hours</span></div><div><b>0</b><span data-i="minutes">Minutes</span></div><div><b>0</b><span data-i="seconds">Seconds</span></div></div>
 </section>
 
 <section class="sheet drawn" id="gallery" style="background:var(--ivory)">
   <div class="frame" aria-hidden="true"></div><i class="cn tl"></i><i class="cn tr"></i><i class="cn bl"></i><i class="cn br"></i>
-  <h2 class="script st" style="font-size:clamp(44px,10vw,68px)">Little moments</h2>
-  <p class="small st" style="margin-top:14px;--d:.1s">Tap a photo to turn it over</p>
+  <h2 class="script st" style="font-size:clamp(44px,10vw,68px)" data-i="moments">Little moments</h2>
+  <p class="small st" style="margin-top:14px;--d:.1s" data-i="tapPhoto">Tap a photo to turn it over</p>
   <div class="gal-grid">
-    <div class="pol" data-rot="-5"><div class="pf"><div class="front"><div class="ph">Add your photo</div><p>The first hello</p></div><div class="back"><p class="note">Write the story behind this photo.</p></div></div></div>
-    <div class="pol" data-rot="4"><div class="pf"><div class="front"><div class="ph">Add your photo</div><p>Coffee that ran long</p></div><div class="back"><p class="note">Write the story behind this photo.</p></div></div></div>
-    <div class="pol" data-rot="5"><div class="pf"><div class="front"><div class="ph">Add your photo</div><p>The question</p></div><div class="back"><p class="note">Write the story behind this photo.</p></div></div></div>
-    <div class="pol" data-rot="-4"><div class="pf"><div class="front"><div class="ph">Add your photo</div><p>And the yes</p></div><div class="back"><p class="note">Write the story behind this photo.</p></div></div></div>
+    <div class="pol" data-rot="-5"><div class="pf"><div class="front"><div class="ph" data-i="addPhoto">Add your photo</div><p>The first hello</p></div><div class="back"><p class="note">Write the story behind this photo.</p></div></div></div>
+    <div class="pol" data-rot="4"><div class="pf"><div class="front"><div class="ph" data-i="addPhoto">Add your photo</div><p>Coffee that ran long</p></div><div class="back"><p class="note">Write the story behind this photo.</p></div></div></div>
+    <div class="pol" data-rot="5"><div class="pf"><div class="front"><div class="ph" data-i="addPhoto">Add your photo</div><p>The question</p></div><div class="back"><p class="note">Write the story behind this photo.</p></div></div></div>
+    <div class="pol" data-rot="-4"><div class="pf"><div class="front"><div class="ph" data-i="addPhoto">Add your photo</div><p>And the yes</p></div><div class="back"><p class="note">Write the story behind this photo.</p></div></div></div>
   </div>
 </section>
 
 <section class="sheet drawn" id="rsvp">
   <div class="frame" aria-hidden="true"></div><i class="cn tl"></i><i class="cn tr"></i><i class="cn bl"></i><i class="cn br"></i>
-  <h2 class="script st" style="font-size:clamp(44px,10vw,68px)">Will you join us?</h2>
-  <p class="small st" style="margin:8px 0 34px;--d:.1s">Kindly reply by <span data-k="rsvpBy">1 December</span></p>
+  <h2 class="script st" style="font-size:clamp(44px,10vw,68px)" data-i="rsvpTitle">Will you join us?</h2>
+  <p class="small st" id="replyBy" style="margin:8px 0 34px;--d:.1s">Kindly reply by 1 December</p>
   <p class="small" id="seatsNote" hidden style="margin:-14px 0 26px"></p>
   <form id="form" class="st" style="--d:.2s">
-    <input class="field" name="name" required maxlength="80" placeholder="Your name" autocomplete="name">
-    <div class="seg" role="group" aria-label="Attendance">
-      <button type="button" data-v="yes" aria-pressed="true">Joyfully accept</button>
-      <button type="button" data-v="no" aria-pressed="false">Regretfully decline</button>
+    <input class="field" name="name" required maxlength="80" placeholder="Your name" data-i-ph="namePh" autocomplete="name">
+    <div class="seg" role="group" aria-label="Attendance" data-i-aria="attendAria">
+      <button type="button" data-v="yes" aria-pressed="true" data-i="accept">Joyfully accept</button>
+      <button type="button" data-v="no" aria-pressed="false" data-i="decline">Regretfully decline</button>
     </div>
-    <input class="field" id="guests" name="guests" type="number" min="1" max="6" value="1" aria-label="Number of guests">
-    <textarea class="field" name="message" rows="2" maxlength="500" placeholder="A note for the couple (optional)"></textarea>
-    <button class="go" type="submit">SEND RSVP</button>
+    <input class="field" id="guests" name="guests" type="number" min="1" max="6" value="1" aria-label="Number of guests" data-i-aria="guestsAria">
+    <textarea class="field" name="message" rows="2" maxlength="500" placeholder="A note for the couple (optional)" data-i-ph="notePh"></textarea>
+    <button class="go" type="submit" data-i="send">Send RSVP</button>
   </form>
   <div class="thanks" id="thanks"><span class="script">Thank you</span><p id="who"></p><p style="margin-top:10px;color:var(--mute)">We can't wait to celebrate with you.</p></div>
 </section>
 </main>
 
-<footer><span class="script"><span data-k="bride">Debopama</span> &amp; <span data-k="groom">Soumajit</span></span><br><span data-k="dateShort">14 . 12 . 2026</span></footer>
+<footer><span class="script"><span data-k="bride">Debopama</span> &amp; <span data-k="groom">Soumajit</span></span><br><span data-k="dateShort">12 . 12 . 2026</span></footer>
 
 <script src="js/config.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

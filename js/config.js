@@ -17,12 +17,35 @@ window.INVITE = {
 
   /* Place and RSVP deadline */
   city:  'Kolkata',
-  venue: 'Lakewood Estate, Community Hall',
+  venue: 'Lakewood Estate',
   rsvpBy: '1 December',
-  mapsQuery: '',   /* what Google Maps should search, e.g. 'Venue name, Kolkata'. '' hides the Open in maps button */
+  address: '266, Garagacha Main Rd, Patuli, New Garia, Kolkata 700084',   /* shown under the venue in the seat pass; '' hides it */
 
-  /* The scroll-reveal story paragraph */
-  story: 'We met by chance. We stayed by choice. Somewhere between long conversations and quiet mornings, we found home in each other. Now we begin the next chapter, and we would love for you to be part of it.',
+  /* GOOGLE MAPS LINK (the venue in the seat pass and the Place card become tappable).
+     Option A (most exact): open the place in Google Maps, tap Share > Copy link, and paste it here.
+       It looks like https://maps.app.goo.gl/xxxxxxxx and opens the Maps app on phones.
+     Option B: leave mapsUrl empty and fill mapsQuery; the link is built from the text.
+     If both are empty, no map link or button is shown. */
+  mapsUrl: '',
+  mapsQuery: 'Lakewood Estate, 266 Garagacha Main Rd, Garagachha, New Garia, Kolkata 700084',
+
+/* The scroll-reveal story paragraph */
+story: "On Durga Puja's final day, our story found its start, from friendship grew a love that captured every heart. With a promise made on day one and blessings from above, we celebrate a year of togetherness and a lifetime of love.",
+
+  /* BENGALI VERSION (optional). Guests switch language with the button in the corner, or you send
+     a link ending in ?lang=bn. Dates and times convert to Bengali automatically from dateISO.
+     Anything you leave '' falls back to the English text. Check the spelling with family. */
+  defaultLang: 'en',   /* 'en' or 'bn': the language shown first (phones set to Bengali open in Bengali anyway) */
+  bn: {
+    bride: 'দেবোপমা',      /* name in Bengali script */
+    groom: 'সৌম্যজিৎ',
+    city:  '',      /* common cities (Kolkata, Howrah, Delhi...) are converted automatically */
+    venue: 'লাকিবোড এস্টেট, কমিউনিটি হল',
+    address: '২৬৬, গড়গাছা প্রধান রাস্তা, পাটুলি, নিউ গড়িয়া, কলকাতা ৭০০৮৪',
+    rsvpBy: '',     /* e.g. '১ ডিসেম্বর'; dates like "1 December" convert automatically */
+/* The scroll-reveal story paragraph */
+    story: "দুর্গাপূজার শেষ দিনে হয়েছিল দেখা, বন্ধুত্বের পথে শুরু, ভালোবাসা এল একা। কোনো প্রস্তাব নয়, ছিল শুধু পাশে থাকার প্রতিশ্রুতি, আজ পরিবারের আশীর্বাদে শুরু হচ্ছে আমাদের নতুন যাত্রাটি। প্রতিদিন নতুন করে প্রেমে পড়ি আমরা দু'জনে, গতকালের চেয়েও বেশি ভালোবাসি আজ, আগামীকালও তেমনি হবে মনে।",
+  },
 
   /* Gallery: 4 polaroids. Tap a photo to turn it over and read the note on the back.
      Add your picture with src: 'assets/images/photo-1.jpg' (portrait 4:5, about 1200 x 1500 px, under 300 KB). */
@@ -35,7 +58,7 @@ window.INVITE = {
 
   /* Music: path to your own licensed mp3, e.g. 'assets/audio/song.mp3'.
      Leave '' (or if the file is missing) to use the soft built-in chord instead. */
-  musicSrc: 'assets/audio/song2.mp3',
+  musicSrc: 'assets/audio/song.mp3',
   musicVolume: 0.18,   /* 0 to 1. Keep it low for background music. */
 
   /* RSVP: leave url '' to keep replies only in the guest's own browser (demo mode).

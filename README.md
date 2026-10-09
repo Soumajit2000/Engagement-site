@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5bda20fc-bcb3-4259-a572-2ed00a36b5f8/deploy-status)](https://app.netlify.com/projects/magical-naiad-2b2679/deploys)
+
 # Debopama & Soumajit: Engagement Invitation
 
 A static website (plain HTML, CSS and JavaScript). No build step, no frameworks.
@@ -10,6 +12,7 @@ engagement-site/
 ├─ css/
 │  └─ styles.css       look and feel: colours, fonts, animations, light/dark themes
 ├─ js/
+│  ├─ i18n.js          English and Bengali wording (rarely edited)
 │  ├─ config.js        <-- YOUR DETAILS: names, date, venue, photos, music, RSVP link
 │  └─ main.js          behaviour: seal intro, scroll effects, haptics, music, RSVP (rarely edited)
 ├─ assets/
@@ -89,6 +92,20 @@ Add a 1200 x 630 picture as `assets/images/share.jpg`, then uncomment the `og:im
 In `config.js`: set `venue`, `address`, and either `mapsUrl` (paste Google Maps > Share > Copy link;
 most exact) or `mapsQuery` (text search). The seat pass then shows an Open in maps button that
 opens the Google Maps app on phones. The Google Calendar entry includes the same directions link.
+
+## Bengali version
+
+Every page has an English / বাংলা switch (on the opening screen and in the corner buttons). Guests can
+also open a link ending in `?lang=bn`, and phones set to Bengali open in Bengali. The design stays the
+same; only the text and fonts change (Galada for the script headings, Tiro Bangla for the body).
+
+- Dates and times convert automatically from `dateISO` (for example "সোমবার, ১৪ ডিসেম্বর ২০২৬", "বিকেল ৪:৩০").
+- Fill the `bn` block in `config.js` with the Bengali spelling of the names, venue, address and story.
+  Empty fields fall back to the English text.
+- For photos you can add `bnCaption` and `bnNote`.
+- `links.html` can add `&lang=bn` to the personal links.
+- To change a Bengali label, edit `js/i18n.js` (the `bn:` section).
+- Have someone who reads Bengali check the wording before you send the invitation.
 
 ## Quick tweaks
 
