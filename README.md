@@ -108,3 +108,5 @@ opens the Google Maps app on phones. The Google Calendar entry includes the same
 - [ ] Music file added, volume checked on a phone
 - [ ] Test RSVP arrives in Supabase
 - [ ] Opened the live link on an iPhone, an Android phone and a laptop, in light and dark mode
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5bda20fc-bcb3-4259-a572-2ed00a36b5f8/deploy-status)](https://app.netlify.com/projects/magical-naiad-2b2679/deploys)
